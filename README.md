@@ -242,6 +242,7 @@ Environment-specific configurations can be set in the following files:
 - .env.production
 - .env.test
 ## Demonstration video
+https://github.com/user-attachments/assets/c9580ba3-e865-44d1-85e4-793a82bedbcd
 
 # Contributing
 
