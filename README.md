@@ -10,7 +10,7 @@ A modern surveillance management system built with Spring Boot backend and React
 
 This application provides a comprehensive surveillance management solution with secure user authentication, real-time monitoring capabilities, and an intuitive user interface.
 
-## Table des Matières
+## Content Table
 1. [Software Architecture](#software-architecture)
 2. [Technology Stack](#technology-stack)
    - [Backend](#backend)
