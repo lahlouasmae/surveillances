@@ -1,0 +1,195 @@
+.loginContainer {
+  min-height: 100vh;
+  background: linear-gradient(120deg, #2B4162 0%, #12100E 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.loginCard {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  padding: 3rem;
+  width: 100%;
+  max-width: 420px;
+  transform: translateY(0);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.loginCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+}
+
+.loginHeader {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.loginTitle {
+  color: #2B4162;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.5px;
+}
+
+.loginSubtitle {
+  color: #666;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.formField {
+  margin: 1.5rem 0;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.inputField {
+  width: 100%;
+  padding: 1rem 1.2rem;
+  border: 2px solid #e1e1e1;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  transition: all 0.3s ease;
+  background: white;
+  box-sizing: border-box;
+}
+
+.inputField:focus {
+  border-color: #2B4162;
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(43, 65, 98, 0.1);
+}
+
+.inputField::placeholder {
+  color: #999;
+  font-weight: 400;
+}
+
+.submitButton {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(135deg, #2B4162 0%, #385780 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.submitButton:hover {
+  background: linear-gradient(135deg, #385780 0%, #2B4162 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(43, 65, 98, 0.3);
+}
+
+.submitButton:active {
+  transform: translateY(0);
+}
+
+.errorAlert {
+  background: #FFF2F2;
+  color: #DC2626;
+  padding: 1rem 1.2rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  border-left: 4px solid #DC2626;
+  animation: slideIn 0.3s ease;
+}
+
+.successAlert {
+  background: #F0FDF4;
+  color: #16A34A;
+  padding: 1rem 1.2rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  border-left: 4px solid #16A34A;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Add a decorative element */
+.loginCard::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  background: linear-gradient(120deg, #2B4162 0%, #385780 100%);
+  border-radius: 25px;
+  z-index: -1;
+  opacity: 0.1;
+  transition: opacity 0.3s ease;
+}
+
+.loginCard:hover::before {
+  opacity: 0.15;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .loginCard {
+    padding: 2rem;
+  }
+
+  .loginTitle {
+    font-size: 1.8rem;
+  }
+
+  .loginSubtitle {
+    font-size: 1rem;
+  }
+}
+
+/* Optional: Add loading state for button */
+.submitButton.loading {
+  background: #385780;
+  cursor: not-allowed;
+  position: relative;
+  overflow: hidden;
+}
+
+.submitButton.loading::after {
+  content: '';
+  position: absolute;
+  left: -100%;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  100% {
+    left: 100%;
+  }
+}

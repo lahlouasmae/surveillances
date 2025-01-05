@@ -1,0 +1,208 @@
+.sessionsContainer {
+    min-height: 100vh;
+    background: linear-gradient(120deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 2rem;
+  }
+  
+  .sessionsHeader {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  }
+  
+  .headerContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .pageTitle {
+    color: #2B4162;
+    font-size: 1.75rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .sessionCount {
+    background: #2B4162;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    margin-left: 0.5rem;
+  }
+  
+  .addButton {
+    background: linear-gradient(135deg, #2B4162 0%, #385780 100%);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(43, 65, 98, 0.2);
+  }
+  
+  .addButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(43, 65, 98, 0.3);
+  }
+  
+  .searchField {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #e1e1e1;
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: white;
+    margin-top: 1rem;
+  }
+  
+  .searchField:focus {
+    border-color: #2B4162;
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(43, 65, 98, 0.1);
+  }
+  
+  .tableHeader {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 2fr auto;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    background: white;
+    border-radius: 12px 12px 0 0;
+    border-bottom: 2px solid #e1e1e1;
+    font-weight: 600;
+    color: #2B4162;
+  }
+  
+  .sessionCard {
+    background: white;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .sessionRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 2fr auto;
+    gap: 1rem;
+    padding: 1.25rem 1.5rem;
+    align-items: center;
+    transition: all 0.2s ease;
+  }
+  
+  .sessionRow:hover {
+    background: rgba(43, 65, 98, 0.03);
+  }
+  
+  .sessionType {
+    color: #2B4162;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .sessionType:hover {
+    color: #385780;
+    text-decoration: underline;
+  }
+  
+  .dateText {
+    color: #666;
+  }
+  
+  .timeSlots {
+    color: #444;
+    font-size: 0.95rem;
+  }
+  
+  .actionButtons {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .iconButton {
+    padding: 0.5rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .editButton {
+    background: rgba(43, 65, 98, 0.1);
+    color: #2B4162;
+  }
+  
+  .editButton:hover {
+    background: rgba(43, 65, 98, 0.2);
+  }
+  
+  .deleteButton {
+    background: rgba(220, 38, 38, 0.1);
+    color: #DC2626;
+  }
+  
+  .deleteButton:hover {
+    background: rgba(220, 38, 38, 0.2);
+  }
+  
+  .emptyState {
+    text-align: center;
+    padding: 3rem;
+    color: #666;
+    background: white;
+    border-radius: 12px;
+    margin-top: 2rem;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .sessionsContainer {
+      padding: 1rem;
+    }
+    
+    .tableHeader, .sessionRow {
+      grid-template-columns: 1fr 1fr 1fr 1.5fr auto;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .headerContent {
+      flex-direction: column;
+      gap: 1rem;
+      align-items: stretch;
+    }
+    
+    .tableHeader {
+      display: none;
+    }
+    
+    .sessionRow {
+      grid-template-columns: 1fr;
+      gap: 0.5rem;
+      padding: 1rem;
+    }
+    
+    .actionButtons {
+      justify-content: flex-end;
+      padding-top: 0.5rem;
+      border-top: 1px solid #e1e1e1;
+    }
+  }

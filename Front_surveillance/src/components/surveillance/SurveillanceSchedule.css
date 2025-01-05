@@ -1,0 +1,322 @@
+.surveillance-wrapper {
+  padding: 1rem;
+  background: white;
+  min-height: 100vh;
+}
+
+.control-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+
+.department-selector {
+  padding: 0.5rem 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  min-width: 200px;
+}
+
+.date-navigation {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-btn, .download-btn {
+  padding: 0.5rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  background: white;
+  color: #64748b;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-btn:hover:not(:disabled),
+.download-btn:hover {
+  background: #f8fafc;
+  color: #1e293b;
+}
+
+.nav-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.current-date-range {
+  padding: 0.5rem 1rem;
+  color: #1e293b;
+  font-weight: 500;
+}
+
+.schedule-container {
+  overflow-x: auto;
+}
+
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.column-headers th,
+.period-headers th,
+.time-headers th {
+  padding: 0.5rem;
+  border: 1px solid #e2e8f0;
+  background: #f8fafc;
+  font-weight: 500;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.teacher-header {
+  position: sticky;
+  left: 0;
+  background: #f8fafc;
+  z-index: 10;
+  min-width: 150px;
+}
+
+.date-header {
+  background: #f1f5f9;
+  font-weight: 600;
+}
+
+.period-cell, .time-cell {
+  background: #f8fafc;
+  font-weight: normal;
+  color: #64748b;
+  font-size: 0.75rem;
+}
+
+.teacher-row td {
+  padding: 0.75rem 0.5rem;
+  border: 1px solid #e2e8f0;
+  text-align: center;
+}
+
+.teacher-name {
+  position: sticky;
+  left: 0;
+  background: white;
+  z-index: 5;
+  text-align: left !important;
+  font-weight: 500;
+}
+
+.schedule-cell {
+  min-width: 80px;
+  height: 40px;
+  vertical-align: middle;
+}
+
+.surveillance-indicator {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.surveillance-indicator.RR {
+  background: rgba(37, 99, 235, 0.1);
+  color: #2563eb;
+}
+
+.surveillance-indicator.TT {
+  background: rgba(22, 163, 74, 0.1);
+  color: #16a34a;
+}
+
+.surveillance-indicator.NO {
+  background: rgba(239, 68, 68, 0.1);
+  color: #dc2626;
+}
+
+@media (max-width: 1024px) {
+  .control-panel {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .date-navigation {
+    justify-content: center;
+  }
+}
+.schedule-cell {
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.schedule-cell:hover {
+  background-color: rgba(99, 102, 241, 0.05);
+}
+
+.surveillance-indicator {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.75rem;
+}
+
+.surveillance-indicator.RESERVISTE {
+  background: rgba(37, 99, 235, 0.1);
+  color: #2563eb;
+}
+
+.surveillance-indicator.NO_SURVEILLANCE {
+  background: rgba(239, 68, 68, 0.1);
+  color: #dc2626;
+}
+
+.surveillance-indicator.TOURNANT {
+  background: rgba(22, 163, 74, 0.1);
+  color: #16a34a;
+}
+
+.surveillance-indicator.BACKUP {
+  background: rgba(245, 158, 11, 0.1);
+  color: #d97706;
+}
+
+.surveillance-menu-item {
+  min-width: 120px;
+}
+
+.surveillance-menu-item.reserviste {
+  color: #2563eb;
+}
+
+.surveillance-menu-item.no_surveillance {
+  color: #dc2626;
+}
+
+.surveillance-menu-item.tournant {
+  color: #16a34a;
+}
+
+.surveillance-menu-item.backup {
+  color: #d97706;
+}
+.surveillance-menu .MuiPaper-root {
+  min-width: 320px;
+  max-width: 400px;
+  padding: 0;
+}
+
+.exam-selection {
+  padding: 1rem;
+}
+
+.menu-title {
+  color: #1e293b;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  padding: 0 0.5rem;
+}
+
+.exam-list {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.exam-item {
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  background: #f8fafc;
+}
+
+.exam-item:hover {
+  background: #f1f5f9;
+}
+
+.exam-info {
+  margin-bottom: 0.75rem;
+}
+
+.surveillance-types {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.type-button {
+  text-transform: none !important;
+  min-width: auto !important;
+  padding: 4px 8px !important;
+  font-size: 0.75rem !important;
+}
+
+.type-button.reserviste {
+  color: #2563eb !important;
+  border-color: #2563eb !important;
+}
+
+.type-button.reserviste.Mui-contained {
+  background-color: #2563eb !important;
+  color: white !important;
+}
+
+.type-button.no_surveillance {
+  color: #dc2626 !important;
+  border-color: #dc2626 !important;
+}
+
+.type-button.no_surveillance.Mui-contained {
+  background-color: #dc2626 !important;
+  color: white !important;
+}
+
+.type-button.tournant {
+  color: #16a34a !important;
+  border-color: #16a34a !important;
+}
+
+.type-button.tournant.Mui-contained {
+  background-color: #16a34a !important;
+  color: white !important;
+}
+
+.type-button.backup {
+  color: #ca8a04 !important;
+  border-color: #ca8a04 !important;
+}
+
+.type-button.backup.Mui-contained {
+  background-color: #ca8a04 !important;
+  color: white !important;
+}
+
+.menu-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  padding: 0.5rem;
+}
+
+/* Scrollbar styling */
+.exam-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.exam-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.exam-list::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.exam-list::-webkit-scrollbar-thumb:hover {
+  background: #a1a1a1;
+}

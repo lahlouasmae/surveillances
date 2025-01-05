@@ -1,0 +1,229 @@
+/* TeacherStyles.css */
+
+/* Layout Container */
+.teacher-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+    background-color: #ffffff;
+}
+
+/* Header Styles */
+.teacher-header {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 1.5rem;
+}
+
+.teacher-header__title {
+    font-size: 1.875rem;
+    font-weight: 600;
+    color: #1a237e;
+    margin-bottom: 0.5rem;
+}
+
+.teacher-header__subtitle {
+    color: #6b7280;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Search and Actions Bar */
+.teacher-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    gap: 1rem;
+}
+
+.teacher-controls__search {
+    flex: 0 1 400px;
+}
+
+.teacher-controls__search input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.375rem;
+    transition: border-color 0.2s ease;
+}
+
+.teacher-controls__search input:focus {
+    outline: none;
+    border-color: #1a237e;
+    box-shadow: 0 0 0 2px rgba(26, 35, 126, 0.1);
+}
+
+/* Teacher Cards */
+.teacher-card {
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    transition: all 0.2s ease;
+}
+
+.teacher-card:hover {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+                0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transform: translateY(-1px);
+}
+
+.teacher-card__content {
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.teacher-card__profile {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.teacher-card__avatar {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: #e8eaf6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: #1a237e;
+}
+
+.teacher-card__info {
+    display: flex;
+    flex-direction: column;
+}
+
+.teacher-card__name {
+    font-weight: 500;
+    color: #1f2937;
+    margin-bottom: 0.25rem;
+}
+
+.teacher-card__specialization {
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+.teacher-card__stats {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: #6b7280;
+    font-size: 0.875rem;
+}
+
+/* Action Buttons */
+.button {
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.375rem;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.2s ease;
+}
+
+.button--primary {
+    background-color: #1a237e;
+    color: #ffffff;
+    border: none;
+}
+
+.button--primary:hover {
+    background-color: #151b60;
+}
+
+.button--secondary {
+    background-color: #ffffff;
+    color: #1a237e;
+    border: 1px solid #1a237e;
+}
+
+.button--secondary:hover {
+    background-color: #f8fafc;
+}
+
+.button--icon {
+    padding: 0.5rem;
+    border-radius: 0.375rem;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    position: relative;
+}
+
+.dropdown-menu__content {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.375rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+                0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    min-width: 12rem;
+    z-index: 50;
+}
+
+.dropdown-menu__item {
+    padding: 0.75rem 1rem;
+    color: #374151;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.dropdown-menu__item:hover {
+    background-color: #f3f4f6;
+}
+
+.dropdown-menu__item--danger {
+    color: #dc2626;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .teacher-controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .teacher-controls__search {
+        flex: none;
+        width: 100%;
+    }
+
+    .teacher-card__content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .teacher-card__stats {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.teacher-card {
+    animation: fadeIn 0.3s ease-out;
+}
